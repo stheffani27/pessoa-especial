@@ -1,14 +1,67 @@
 body {
-  background-color: rgb(237, 135, 135); 
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffc0cb, #ffe4e1);
+  font-family: Verdana, sans-serif;
+  overflow: hidden;
 }
 
-h1 {
-  color: rgb(241, 92, 92); 
+/* Container (quadro branco) */
+.container {
+  background: white;
+  width: 80%;
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
+/* Título */
+h1 {
+  color: #e75480;
+}
+
+/* Texto */
 p {
-
-  font-family: verdana;
-  font-size: 20px;
+  font-size: 18px;
+  color: #444;
 }
+
+/* Assinatura */
+.assinatura {
+  margin-top: 20px;
+  font-style: italic;
+}
+
+/* Corações animados */
+.hearts span {
+  position: absolute;
+  bottom: -50px;
+  font-size: 24px;
+  animation: subir 8s linear infinite;
+}
+
+/* Posições diferentes */
+.hearts span:nth-child(1) { left: 10%; animation-delay: 0s; }
+.hearts span:nth-child(2) { left: 20%; animation-delay: 2s; }
+.hearts span:nth-child(3) { left: 30%; animation-delay: 4s; }
+.hearts span:nth-child(4) { left: 40%; animation-delay: 1s; }
+.hearts span:nth-child(5) { left: 50%; animation-delay: 3s; }
+.hearts span:nth-child(6) { left: 60%; animation-delay: 5s; }
+.hearts span:nth-child(7) { left: 70%; animation-delay: 2s; }
+.hearts span:nth-child(8) { left: 80%; animation-delay: 4s; }
+
+/* Animação */
+@keyframes subir {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-800px) scale(1.5);
+    opacity: 0;
